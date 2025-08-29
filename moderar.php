@@ -33,7 +33,7 @@ if($editar_id){
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<a href="mural.php">
+<a href="index.php">
   <button>Ir para mural</button>
 </a>
 <meta charset="utf-8"/>
