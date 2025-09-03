@@ -21,7 +21,7 @@ if(isset($_POST['cadastra'])){
 </a>
 
 <meta charset="utf-8"/>
-<title>Mural de pedidos</title>
+<title>Mural</title>
 <link rel="stylesheet" href="style.css"/>
 <script src="scripts/jquery.js"></script>
 <script src="scripts/jquery.validate.js"></script>
@@ -46,7 +46,7 @@ $(document).ready(function() {
 <div id="main">
 <div id="geral">
 <div id="header">
-    <h1>Mural de pedidos</h1>
+    <h1>Mural</h1>
 </div>
 <div id="formulario_mural">
 <form id="mural" method="post">

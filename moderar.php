@@ -37,14 +37,14 @@ if($editar_id){
   <button>Ir para mural</button>
 </a>
 <meta charset="utf-8"/>
-<title>Moderar pedidos</title>
+<title>Modificar Mural</title>
 <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 <div id="main">
 <div id="geral">
 <div id="header">
-    <h1>Mural de pedidos</h1>
+    <h1>Modificar Mural</h1>
 </div>
 
 <?php if($recado_editar): ?>
