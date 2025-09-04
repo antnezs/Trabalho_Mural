@@ -27,8 +27,9 @@ body {
 }
 
 #header {
-    background: linear-gradient(90deg,rgb(255, 0, 0) 0%,rgb(225, 255, 0) 33%, rgb(0, 255, 106) 50%, rgb(162, 0, 255) 100%);
+    background: linear-gradient(90deg,rgb(11, 111, 204) 0%,rgb(19, 108, 233) 33%, rgb(0, 174, 255) 50%, rgb(39, 87, 208) 100%);
     padding: 20px;
+
     text-align: center;
 }
 
