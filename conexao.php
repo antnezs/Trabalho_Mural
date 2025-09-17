@@ -3,7 +3,7 @@
 // Configurações do banco
 $host    = "localhost";   // normalmente não precisa alterar
 $usuario = "root";        // substituir se seu usuário não for root
-$senha   = "root";            // substituir se você tiver senha no MySQL
+$senha   = "";            // substituir se você tiver senha no MySQL
 $banco   = "mural";       // substituir pelo nome do seu banco criado no phpMyAdmin
 
 // Conexão MySQLi
@@ -17,7 +17,7 @@ if (!$conexao) {
 mysqli_set_charset($conexao, "utf8");
 
 // Substituam os valores abaixo pelas credenciais da sua própria conta do Cloudinary
-$cloud_name = "Root";  // exemplo: "meucloud123"
+$cloud_name = "dc8deo9mq";  // exemplo: "meucloud123"
 $api_key    = "115232165799632";     // exemplo: "123456789012345"
 $api_secret = "XTzW8FLIWveRxm6OTMUkPWJks3c";  // exemplo: "abcdeFGHijkLMNopqrstu"
 
