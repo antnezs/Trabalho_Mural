@@ -116,7 +116,7 @@ COMPARAÇÃO:
                     <p><img src="<?= htmlspecialchars($res['imagem_url']) ?>" alt="<?= htmlspecialchars($res['nome']) ?>"></p>
 
                     <!-- Link para excluir -->
-                    <a href="moderar.php?excluir=<?= $res['id'] ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+                    <a href="moderar.php?excluir=<?= $res['id'] ?>" onclick="return confirm('Tem certeza que deseja excluir?')" class="btn">Excluir</a>
 
                     <!-- Formulário de edição inline -->
                     <?php if($editar_id == $res['id']): ?>
@@ -125,11 +125,11 @@ COMPARAÇÃO:
                             <input type="text" name="nome" value="<?= htmlspecialchars($res['nome']) ?>" required><br>
                             <textarea name="descricao" required><?= htmlspecialchars($res['descricao']) ?></textarea><br>
                             <input type="number" step="0.01" name="preco" value="<?= $res['preco'] ?>" required><br>
-                            <input type="submit" name="editar" value="Salvar">
-                            <a href="moderar.php">Cancelar</a>
+                            <input type="submit" name="editar" value="Salvar" class="btn">
+                            <a href="moderar.php" class="btn">Cancelar</a>
                         </form>
                     <?php else: ?>
-                        <a href="moderar.php?editar=<?= $res['id'] ?>">Editar</a>
+                        <a href="moderar.php?editar=<?= $res['id'] ?>" class="btn">Editar</a>
                     <?php endif; ?>
                 </div>
             <?php endwhile; ?>
