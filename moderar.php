@@ -111,10 +111,11 @@ COMPARAÇÃO:
                 <div class="produto">
                     <p><strong>ID:</strong> <?= $res['id'] ?></p>
                     <p><strong>Nome:</strong> <?= htmlspecialchars($res['nome']) ?></p>
-                    <p><strong>Preço:</strong> R$ <?= number_format($res['preco'], 2, ',', '.') ?></p>
-                    <p><strong>Descrição:</strong> <?= nl2br(htmlspecialchars($res['descricao'])) ?></p>
+                    <p class="produto-preco"><strong>Preço:</strong> R$ <?= number_format($res['preco'], 2, ',', '.') ?></p>
+                    <p class="produto-descricao"><strong>Descrição:</strong> <?= nl2br(htmlspecialchars($res['descricao'])) ?></p>
+                    <div class="produto-imagem">
                     <p><img src="<?= htmlspecialchars($res['imagem_url']) ?>" alt="<?= htmlspecialchars($res['nome']) ?>"></p>
-
+            </div>
                     <!-- Link para excluir -->
                     <a href="moderar.php?excluir=<?= $res['id'] ?>" onclick="return confirm('Tem certeza que deseja excluir?')" class="btn">Excluir</a>
 
@@ -129,7 +130,7 @@ COMPARAÇÃO:
                             <a href="moderar.php" class="btn">Cancelar</a>
                         </form>
                     <?php else: ?>
-                        <a href="moderar.php?editar=<?= $res['id'] ?>" class="btn">Editar</a>
+                        <a href="moderar.php?editar=<?= $res['id'] ?>" class="btn-editar">Editar</a>
                     <?php endif; ?>
                 </div>
             <?php endwhile; ?>
