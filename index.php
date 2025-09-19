@@ -76,7 +76,7 @@ COMPARAÇÃO COM O CÓDIGO DE "ANTIGOxCLOUDINARY"
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <a href="moderar.php">
+ <a href="moderar.php">
   <button>Ir para moderar</button>
 </a>
 
@@ -134,31 +134,27 @@ $(document).ready(function() {
             </form>
         </div>
 
-        <!-- ==========================
-        LISTA DE PRODUTOS
-        ========================== -->
-        <div class="produtos-container">
-        <?php
-        $seleciona = mysqli_query($conexao, "SELECT * FROM recados ORDER BY id DESC");
-        while($res = mysqli_fetch_assoc($seleciona)){
-            echo '<div class="produto">';
-            echo '<p><strong>ID:</strong> ' . $res['id'] . '</p>';
-            echo '<p><strong>Nome:</strong> ' . htmlspecialchars($res['nome']) . '</p>';
-            echo '<p><strong>Preço:</strong> R$ ' . number_format($res['preco'], 2, ',', '.') . '</p>';
-            echo '<p><strong>Descrição:</strong> ' . nl2br(htmlspecialchars($res['descricao'])) . '</p>';
-            echo '<img src="' . htmlspecialchars($res['imagem_url']) . '" alt="' . htmlspecialchars($res['nome']) . '">';
-            echo '</div>';
-        }
-
-        /*
-        COMPARAÇÃO: Código antigo x cloudinary
-        - Exibe em <ul class="recados"> cada recado
-        - Mostra nome, email e mensagem
-        - Não há imagem, preço ou descrição longa
-        */
-
-        ?>
-        </div>
+<!-- ==========================
+LISTA DE PRODUTOS
+========================== -->
+<div class="produtos-container">
+<?php
+$seleciona = mysqli_query($conexao, "SELECT * FROM recados ORDER BY id DESC");
+while($res = mysqli_fetch_assoc($seleciona)){
+    echo '<div class="produto">';
+    echo '<div class="produto-info">';
+    echo '<p><strong>ID:</strong> ' . $res['id'] . '</p>';
+    echo '<p><strong>Nome:</strong> ' . htmlspecialchars($res['nome']) . '</p>';
+    echo '<p class="produto-preco"><strong>Preço:</strong> R$ ' . number_format($res['preco'], 2, ',', '.') . '</p>';
+    echo '<p class="produto-descricao"><strong>Descrição:</strong> ' . nl2br(htmlspecialchars($res['descricao'])) . '</p>';
+    echo '<div class="produto-imagem">';
+    echo '<img src="' . htmlspecialchars($res['imagem_url']) . '" alt="' . htmlspecialchars($res['nome']) . '">';
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+}
+?>
+</div>
 
         <div id="footer">
             <p>Mural - Cloudinary & PHP</p>
